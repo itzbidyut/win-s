@@ -1,38 +1,248 @@
 .App {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 120px 0px;
+}
+.container {
+  min-width: 1240px;
+}
+.contactBox {
+  background: #ffffff;
+  box-shadow: 0px 54px 54px rgba(74, 58, 255, 0.02),
+    1px 4px 104px rgba(20, 20, 43, 0.04), 0px 98px 66px rgba(19, 18, 66, 0.02);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  padding: 17px 21px;
+}
+.contactDetail {
+  background: #fafafa;
+  border-radius: 20px;
+  width: 458px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.contactForm {
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ContactDetailsComponent {
+  padding: 39px 52px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.ContactDetailsComponent .heading {
+  font-family: "Axiforma";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 160%;
+  color: #000000;
+  margin-bottom: 32px;
+}
+.ContactDetailsComponent .contactDetails {
+  margin-bottom: 16px;
+}
+.ContactDetailsComponent .title {
+  font-family: "Axiforma";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #1d2b4f;
+  margin-bottom: 7px;
+}
+.ContactDetailsComponent .details {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  color: #000000;
+  margin-bottom: 0px;
+}
+.ContactFormComponent {
+  padding: 70px 45px;
+}
+.ContactFormComponent .inputRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 43px;
+}
+.ContactFormComponent .inputBox {
+  width: 295px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.ContactFormComponent label {
+  font-family: "Axiforma";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.ContactFormComponent input {
+  padding: 20px 25px;
+  background: #ffffff;
+  border: 1px solid #eff0f7;
+  outline: none;
+  box-shadow: 0px 2px 6px rgba(19, 18, 66, 0.07);
+  border-radius: 10px;
+}
+.ContactFormComponent input::placeholder {
+  color: #6f6c90;
+}
+.ContactFormComponent textarea {
+  background: #ffffff;
+  border: 1px solid #eff0f7;
+  padding: 20px 25px;
+  box-shadow: 0px 2px 6px rgba(19, 18, 66, 0.07);
+  border-radius: 10px;
+  width: 564px;
+  height: 168px;
+  outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.ContactFormComponent .btnSubmit {
+  margin-top: 30px;
+  background: #005981;
+  border-radius: 10px;
+  padding: 16px 32px;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 0.46px;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.ContactFormComponent .btnSubmit:hover {
+  opacity: 0.9;
+}
+.SubscribeComponent {
+  padding: 52px 0px;
+  background: #eeeeee;
+  border-radius: 12px;
+  margin-top: 60px;
+}
+.SubscribeComponent .title {
+  font-family: "Axiforma";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #000000;
+  margin-top: 0px;
+}
+.SubscribeComponent .subtitle {
+  font-family: "Axiforma";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  text-align: center;
+  margin-bottom: 44px;
+  color: #000000;
+}
+.SubscribeComponent .subscribeForm {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 25px;
+}
+.SubscribeComponent .subscribeForm input {
+  background: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  padding: 12px 32px;
+  outline: none;
+  width: 370px;
+}
+.SubscribeComponent .subscribeForm .Subbtn {
+  padding: 16px 56px;
+  background: #d4a656;
+  color: rgb(255, 255, 255);
+  border: 2px solid #d4a656;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.Subbtn:hover {
+  opacity: 0.9;
+}
+.error {
+  color: red;
+  margin-top: 30px;
+}
+.success {
+  color: rgb(0, 255, 21);
+  margin-top: 30px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 800px) {
+  .container {
+    width: 95% !important;
+    min-width: 1px;
   }
-  to {
-    transform: rotate(360deg);
+  .contactDetail {
+    width: 100%;
+  }
+  .ContactDetailsComponent {
+    padding: 39px 25px;
+  }
+  .ContactFormComponent {
+    padding: 70px 25px;
+  }
+  .contactBox {
+    flex-direction: column;
+  }
+  .contactDetailsBox {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .ContactDetailsComponent .heading {
+    margin-bottom: 0px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .contactDetailsBox {
+    justify-content: normal;
+    flex-direction: column;
+    gap: 0px;
+  }
+  .ContactFormComponent textarea,
+  .ContactFormComponent .inputBox {
+    width: 100% !important;
+  }
+  .ContactFormComponent {
+    padding: 70px 5px;
+  }
+  .SubscribeComponent .title {
+    font-size: 25px;
+  }
+  .SubscribeComponent .subtitle {
+    font-size: 14px;
+    padding: 0px 30px;
+  }
+  .ContactFormComponent textarea {
+    padding: 20px 8px;
+  }
+  .subscribeForm {
+    padding: 20px;
+  }
+  .SubscribeComponent .subscribeForm {
+    justify-content: center;
+    gap: 15px;
+    flex-direction: column;
+  }
+  .SubscribeComponent .subscribeForm .Subbtn {
+    padding: 8px 56px;
+  }
+  .SubscribeComponent .subscribeForm input {
+    width: 80%;
+  }
+  .App {
+    margin: 50px 0px;
   }
 }
